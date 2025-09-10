@@ -33,11 +33,12 @@ public record FileHandler(String FILENAME, String FILETYPE) implements FileServi
     public void deleteFile() throws FileException {
         File file = new File(FILENAME + FILETYPE);
         if (file.exists()) {
+            System.out.println("File has been deleted");
             if (!file.delete()) {
-                throw new FileException("Не удалось удалить файл: " + FILENAME + FILETYPE);
+                throw new FileException("File not found: " + FILENAME + FILETYPE);
             }
         } else {
-            throw new FileException("Файл не найден: " + FILENAME + FILETYPE);
+            throw new FileException("File not found: " + FILENAME + FILETYPE);
         }
     }
 }
