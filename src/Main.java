@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) throws FileException {
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.print("Options:");
         System.out.println("1: Create and Read file ");
         System.out.println("2: Create new file");
@@ -13,6 +12,7 @@ public class Main {
         System.out.println("4: Delete file");
         System.out.print("What u want to do? : ");
         int option = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Name ur file");
         String newFileName = scanner.next();
@@ -20,9 +20,10 @@ public class Main {
         String newFileType = scanner.next();
 
         FileHandler fileHandler = new FileHandler(newFileName, newFileType);
+        scanner.nextLine();
         switch (option) {
             case 1: {
-                System.out.println("Input the data");
+                System.out.println("Input the data: ");
                 String newData = scanner.nextLine();
                 fileHandler.createFile(newData);
 
@@ -30,7 +31,7 @@ public class Main {
                 break;
             }
             case 2: {
-                System.out.println("Input the data");
+                System.out.println("Input the data: ");
                 String newData = scanner.nextLine();
 
                 fileHandler.createFile(newData);
