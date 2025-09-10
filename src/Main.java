@@ -23,7 +23,7 @@ public class Main {
         switch (option) {
             case 1: {
                 System.out.println("Input the data");
-                String newData = scanner.next();
+                String newData = scanner.nextLine();
                 fileHandler.createFile(newData);
 
                 fileHandler.fileReader();
@@ -31,7 +31,7 @@ public class Main {
             }
             case 2: {
                 System.out.println("Input the data");
-                String newData = scanner.next();
+                String newData = scanner.nextLine();
 
                 fileHandler.createFile(newData);
                 break;
